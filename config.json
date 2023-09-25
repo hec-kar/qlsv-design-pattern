@@ -1,0 +1,15 @@
+[
+  {
+    "kieu_nguon": 1,
+    "chuoi_ket_noi": "./sinhvien.txt"
+  },
+  {
+    "kieu_nguon": 2,
+    "chuoi_ket_noi": {
+      "host": "localhost",
+      "user": "root",
+      "password": "",
+      "database": "student"
+    }
+  }
+]
