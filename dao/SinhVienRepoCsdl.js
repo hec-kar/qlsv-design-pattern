@@ -3,7 +3,7 @@
 const SinhVienRepo = require('./SinhVienRepo');
 const Database = require('./database.connect');
 
-const { chuyenDoiNgaySinh } = require('../utils/index')
+const { chuyenDoiNgaySinh } = require('../utils/index');
 
 
 class SinhVienRepoCsdl extends SinhVienRepo {
@@ -26,8 +26,8 @@ class SinhVienRepoCsdl extends SinhVienRepo {
     }
 
 
-    writeData({ hoTen, ngaySinh, gioiTinh }) {
-        const db = Database.getInstance(this.chuoiKetNoi);
+    writeData(chuoi_ket_noi, { hoTen, ngaySinh, gioiTinh }) {
+        const db = Database.getInstance(chuoi_ket_noi);
         const ngaySinhCdsl = chuyenDoiNgaySinh(ngaySinh);
         db.connection.execute('INSERT INTO student (full_name, date_of_birth, gender) VALUES (?, ?, ?)',
             [hoTen, ngaySinhCdsl, gioiTinh],
